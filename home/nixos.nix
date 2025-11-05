@@ -3,13 +3,8 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    git
-    fzf
-    lsd
-    bat
     micro
     lazydocker
-    lazygit
     tldr
     fd
     gping
@@ -22,16 +17,23 @@
     frogmouth
     glow
     ripgrep
-    fastfetch
-    thefuck
     gittype
     sops
     age
     python314
   ];
 
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    userName  = "Daniil Miroshnik";
+    userEmail = "daniilmiroshnik11062001@gmail.com";
+  };
+
   programs.fzf.enable = true;
+  programs.lsd.enable = true;
+  programs.bat.enable = true;
+  programs.lazygit.enable = true;
+  programs.fastfetch.enable = true;
 
   home.file.".gitconfig".text = ''
     [core]
