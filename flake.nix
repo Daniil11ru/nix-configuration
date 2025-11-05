@@ -17,7 +17,7 @@
     nixosConfigurations.wsl = lib.nixosSystem {
       inherit system;
 
-      specialArgs = { inherit inputs; inputs = { inherit gittype; }; };
+      specialArgs = { inherit inputs; };
 
       modules = [
         nixos-wsl.nixosModules.wsl
