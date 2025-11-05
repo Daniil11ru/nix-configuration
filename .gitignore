@@ -1,0 +1,6 @@
+.result
+.direnv/
+.nix-profile
+*.swp
+*.swo
+.DS_Store

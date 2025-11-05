@@ -1,0 +1,23 @@
+{
+    "language": "en, ru",
+    "words": [
+        "Caplag",
+        "direnv",
+        "fastfetch",
+        "fluxcd",
+        "gittype",
+        "gping",
+        "lazydocker",
+        "lazygit",
+        "lazyjournal",
+        "lazysql",
+        "nixos",
+        "nixpkgs",
+        "Pkgs",
+        "rustc",
+        "tabiview",
+        "thefuck",
+        "timr",
+        "unhappychoice"
+    ]
+}
