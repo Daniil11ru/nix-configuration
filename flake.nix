@@ -7,7 +7,7 @@
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-wsl, gittype, ... }:
+  outputs = { self, nixpkgs, home-manager, nixos-wsl, ... }:
   let
     system = builtins.currentSystem;
     lib = nixpkgs.lib;
