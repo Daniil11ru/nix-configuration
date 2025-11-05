@@ -5,7 +5,7 @@
 1. Клонируйте репозиторий и перейдите в каталог:
 
     ```bash
-    git clone <url> nixos-configuration
+    git clone git@github.com:Daniil11ru/nix-configuration.git nixos-configuration
     cd nixos-configuration
     ```
 
