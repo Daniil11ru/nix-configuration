@@ -9,7 +9,7 @@
 
   outputs = { self, nixpkgs, home-manager, nixos-wsl, ... }:
   let
-    system = builtins.currentSystem;
+    system = "x86_64-linux";
     lib = nixpkgs.lib;
   in {
     nixosConfigurations.wsl = lib.nixosSystem {
