@@ -17,7 +17,6 @@
     frogmouth
     glow
     ripgrep
-    gittype
     sops
     age
     python314
