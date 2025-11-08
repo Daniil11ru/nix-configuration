@@ -2,7 +2,9 @@
     "language": "en, ru",
     "words": [
         "Caplag",
+        "Conflictstyle",
         "Daniil",
+        "difffilter",
         "direnv",
         "fastfetch",
         "fluxcd",
@@ -20,6 +22,7 @@
         "tabiview",
         "thefuck",
         "timr",
-        "unhappychoice"
+        "unhappychoice",
+        "zdiff"
     ]
 }
