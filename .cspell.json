@@ -30,6 +30,7 @@
         "nixpkgs",
         "Pkgs",
         "precmd",
+        "precommand",
         "rmkx",
         "rustc",
         "setopt",

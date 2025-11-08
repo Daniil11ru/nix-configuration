@@ -45,11 +45,14 @@
       async = true;
     };
 
-    syntaxHighlighting.enable = true;
-    syntaxHighlighting.highlighters = [
-      "main"
-      "brackets"
-    ];
+    syntaxHighlighting = {
+      enable = true;
+      highlighters = [
+        "main"
+        "brackets"
+        "pattern"
+      ];
+    };
   };
   
   users.users.nixos.shell = pkgs.zsh;

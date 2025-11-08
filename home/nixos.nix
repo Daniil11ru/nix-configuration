@@ -1,5 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, catppuccin, ... }:
 {
+  imports = [
+    catppuccin.homeModules.catppuccin
+  ];
+
   home.stateVersion = "25.05";
 
   home.shellAliases = {
@@ -18,7 +22,6 @@
     fd
     gping
     doggo
-    delta
     dust
     duf
     lazysql
@@ -31,6 +34,7 @@
     age
     python3Full
     docker
+    delta
   ];
 
   programs.git = {
@@ -78,4 +82,10 @@
   programs.bat.enable = true;
   programs.lazygit.enable = true;
   programs.fastfetch.enable = true;
+  programs.home-manager.enable = true;
+
+  catppuccin.enable = true;
+  catppuccin.flavor = "mocha";
+  catppuccin.zsh-syntax-highlighting.enable = true;
+  catppuccin.delta.enable = true;
 }
