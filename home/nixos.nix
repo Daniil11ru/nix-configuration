@@ -62,9 +62,11 @@
   programs.lsd = {
     enable = true;
     enableBashIntegration = true;
+    enableZshIntegration = true;
   };
 
   programs.bash.enable = true;
+  programs.zsh.enable = true;
   programs.fzf.enable = true;
   programs.bat.enable = true;
   programs.lazygit.enable = true;
