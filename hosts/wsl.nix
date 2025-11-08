@@ -40,7 +40,6 @@
     enableBashCompletion = true;
     autosuggestions = {
       enable = true;
-      highlightStyle = "fg=#8a8a8a";
       strategy = [ "history" "completion" ];
       async = true;
     };

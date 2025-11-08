@@ -82,7 +82,6 @@
   programs.bat.enable = true;
   programs.lazygit.enable = true;
   programs.fastfetch.enable = true;
-  programs.home-manager.enable = true;
 
   catppuccin.enable = true;
   catppuccin.flavor = "mocha";
