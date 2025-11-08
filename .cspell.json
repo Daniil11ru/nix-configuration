@@ -1,6 +1,7 @@
 {
     "language": "en, ru",
     "words": [
+        "bindkey",
         "bleopt",
         "blesh",
         "Caplag",
@@ -8,10 +9,16 @@
         "Daniil",
         "difffilter",
         "direnv",
+        "echoti",
         "fastfetch",
         "fluxcd",
         "gittype",
         "gping",
+        "histappend",
+        "kcub",
+        "kcud",
+        "kcuf",
+        "kcuu",
         "lazydocker",
         "lazygit",
         "lazyjournal",
@@ -20,11 +27,20 @@
         "nixos",
         "nixpkgs",
         "Pkgs",
+        "precmd",
+        "rmkx",
         "rustc",
+        "setopt",
+        "shopt",
+        "smkx",
         "tabiview",
+        "terminfo",
         "thefuck",
         "timr",
         "unhappychoice",
-        "zdiff"
+        "vicmd",
+        "viins",
+        "zdiff",
+        "zmodload"
     ]
 }
