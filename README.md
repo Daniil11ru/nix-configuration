@@ -17,21 +17,6 @@
    sudo nixos-rebuild switch --flake .#wsl
    ```
 
-## Дополнительные окружения
-
-Активация:
-
-```bash
-cd projects/<project>
-nix develop
-```
-
-Выход:
-
-```bash
-exit
-```
-
 ## Обновление версий входов
 
 ```bash
