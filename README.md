@@ -2,6 +2,19 @@
 
 ## Быстрый старт
 
+1. Установите Home Manager:
+
+    ```bash
+    nix-channel --add https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz home-manager
+    nix-channel --update
+    ```
+
+1. Установите Git во временную оболочку:
+
+    ```bash
+    nix --extra-experimental-features 'nix-command flakes' shell nixpkgs#git
+    ```
+
 1. Клонируйте репозиторий и перейдите в каталог:
 
     ```bash
@@ -16,6 +29,12 @@
    ```bash
    sudo nixos-rebuild switch --flake .#wsl
    ```
+
+1. Выйдите из временной оболочки:
+
+    ```bash
+    exit
+    ```
 
 ## Обновление версий входов
 

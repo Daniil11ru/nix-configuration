@@ -3,6 +3,7 @@
     "jeff-hykin.better-nix-syntax",
     "DavidAnson.vscode-markdownlint",
     "wayou.vscode-todo-highlight",
+    "redhat.vscode-yaml",
     "streetsidesoftware.code-spell-checker",
     "streetsidesoftware.code-spell-checker-russian"
   ]
