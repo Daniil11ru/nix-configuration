@@ -22,7 +22,12 @@
     cd nixos-configuration
     ```
 
-1. При необходимости замените имя пользователя (`nixos` по умолчанию);
+1. Скопируйте ключ:
+
+    ```bash
+    mkdir -p ~/.config/sops/age
+    cp <path-to-age-key-file> ~/.config/sops/age/keys.txt
+    ```
 
 1. Примените конфигурацию:
 
@@ -44,4 +49,5 @@ nix flake update
 
 ## TODO
 
-1. Добавить tabiview, timr-tui.
+1. Добавить tabiview;
+1. Добавить timr-tui;
