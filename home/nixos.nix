@@ -43,12 +43,10 @@
     enable = true;
     flavor = "mocha";
     zsh-syntax-highlighting.enable = true;
-    delta.enable = true;
   };
 
   home.packages = with pkgs; [
   	wget
-    micro
     lazydocker
     tldr
     fd
@@ -68,6 +66,16 @@
     docker
     delta
   ];
+
+  home.sessionVariables.MICRO_TRUECOLOR = "1";
+
+  programs.micro = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+    };
+  };
 
   programs.git = {
     enable = true;
@@ -90,7 +98,10 @@
       };
       delta = {
         navigate = true;
-        dark     = true;
+        catppuccin = {
+          enable = true;
+          flavor = "mocha";
+        };
       };
     };
   };
