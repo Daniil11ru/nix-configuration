@@ -43,6 +43,11 @@
     enable = true;
     flavor = "mocha";
     zsh-syntax-highlighting.enable = true;
+
+    micro = {
+      enable = true;
+      flavor = "mocha";
+    };
   };
 
   home.packages = with pkgs; [
@@ -72,10 +77,6 @@
 
   programs.micro = {
     enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-    };
   };
 
   programs.git = {
