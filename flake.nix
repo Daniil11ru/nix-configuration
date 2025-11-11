@@ -16,7 +16,8 @@
     lib = nixpkgs.lib;
   in {
     nixosConfigurations.wsl = lib.nixosSystem {
-      inherit system;
+      system = system;
+      specialArgs = { inherit system self; };
 
       modules = [
         nixos-wsl.nixosModules.wsl

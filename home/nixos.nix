@@ -65,6 +65,7 @@
     python3Full
     docker
     delta
+    shfmt
   ];
 
   home.sessionVariables.MICRO_TRUECOLOR = "1";

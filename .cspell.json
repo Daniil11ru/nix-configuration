@@ -36,6 +36,7 @@
         "rmkx",
         "rustc",
         "setopt",
+        "shfmt",
         "shopt",
         "smkx",
         "tabiview",
