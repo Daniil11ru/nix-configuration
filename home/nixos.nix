@@ -137,6 +137,7 @@
         user = "git";
         identitiesOnly = true;
         identityFile = config.sops.secrets."ssh/id_ed25519_gitea".path;
+        proxyCommand = "${pkgs.netcat-openbsd}/bin/nc -x 127.0.0.1:10801 -X connect %h %p";
       };
     };
   };
