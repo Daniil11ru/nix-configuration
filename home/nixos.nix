@@ -11,10 +11,14 @@
     secrets."ssh/id_ed25519_github" = {
       format = "binary";
       sopsFile = self + "/ssh/private/id_ed25519_github.sops";
+      path = "${config.home.homeDirectory}/.ssh/id_ed25519_github";
+      mode = "0600";
     };
     secrets."ssh/id_ed25519_gitea" = {
       format = "binary";
       sopsFile = self + "/ssh/private/id_ed25519_gitea.sops";
+      path = "${config.home.homeDirectory}/.ssh/id_ed25519_gitea";
+      mode = "0600";
     };
   };
 
