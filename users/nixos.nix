@@ -4,10 +4,12 @@
     catppuccin.homeModules.catppuccin
     ../modules/kubernetes.nix
     ../modules/ansible.nix
+    ../modules/frontend.nix
   ];
 
   my.kubernetes.enable = true;
   my.ansible.enable = true;
+  my.frontend.enable = true;
 
   services.ssh-agent.enable = true; 
 
