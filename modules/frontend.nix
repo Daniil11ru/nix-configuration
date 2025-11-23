@@ -7,9 +7,14 @@ in {
     lib.mkEnableOption "Frontend";
 
   config = lib.mkIf cfg.enable {
-    home.packages =
-      (with pkgs; [
-        bun
-      ]);
+    home.packages = [
+      pkgs.bun
+    ];
+
+    my.python.packages = with pkgs.python313Packages; [
+      fastapi
+      pydantic
+      uvicorn
+    ];
   };
 }
