@@ -79,7 +79,6 @@
     ripgrep
     sops
     age
-    python313
     docker
     delta
     shfmt
