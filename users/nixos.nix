@@ -5,6 +5,7 @@
     ../modules/kubernetes.nix
     ../modules/ansible.nix
     ../modules/frontend.nix
+    ../modules/python.nix
   ];
 
   my.kubernetes.enable = true;
