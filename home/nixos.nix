@@ -45,12 +45,12 @@
 
   catppuccin = {
     enable = true;
-    flavor = "mocha";
+    flavor = "macchiato";
     zsh-syntax-highlighting.enable = true;
 
     micro = {
       enable = true;
-      flavor = "mocha";
+      flavor = "macchiato";
     };
   };
 
@@ -75,6 +75,7 @@
     docker
     delta
     shfmt
+    coreutils
   ];
 
   home.sessionVariables.MICRO_TRUECOLOR = "1";
@@ -116,7 +117,7 @@
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
-    useTheme = "catppuccin_mocha";
+    useTheme = "catppuccin_mocha"
   };
 
   programs.lsd = {
