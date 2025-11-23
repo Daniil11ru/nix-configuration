@@ -120,7 +120,7 @@
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
-    useTheme = "catppuccin_mocha"
+    useTheme = "catppuccin_mocha";
   };
 
   programs.lsd = {

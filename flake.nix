@@ -18,11 +18,6 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
 
-    pkgs = import nixpkgs { 
-      inherit system;
-      config.allowUnfree = true;
-    };
-
     pkgsUnstable = import nixpkgs-unstable {
       inherit system;
       config.allowUnfree = true;
@@ -36,6 +31,8 @@
         nixos-wsl.nixosModules.wsl
 
         ./hosts/wsl.nix
+
+        { nixpkgs.config.allowUnfree = true; }
 
         home-manager.nixosModules.home-manager
         {

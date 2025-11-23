@@ -8,8 +8,7 @@ in {
 
   config = lib.mkIf cfg.enable {
     home.packages =
-      (config.home.packages or [])
-      ++ (with pkgs; [
+      (with pkgs; [
         kubectl
         kubernetes-helm
         terraform
