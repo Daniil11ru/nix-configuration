@@ -16,12 +16,15 @@ in {
   config = lib.mkIf cfg.enable {
     sops.secrets."kubeconfig/timeweb" = {
       sopsFile = self + "/files/kubernetes/configs/timeweb.sops.yaml";
+      format = "yaml";
+      # Без этого падает с ошибкой
+      key = "";
       path = providerKubeconfigPath;
       mode = "0600";
     };
 
     home.activation.mergeKubeconfig =
-      lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      lib.hm.dag.entryAfter [ "writeBoundary" "sops-nix" ] ''
         mkdir -p "$HOME/.kube"
         chmod 700 "$HOME/.kube"
 
