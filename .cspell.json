@@ -24,6 +24,7 @@
         "kcuf",
         "kcuu",
         "komictf",
+        "Kubeconfig",
         "lazydocker",
         "lazygit",
         "lazyjournal",
@@ -45,12 +46,14 @@
         "tabiview",
         "terminfo",
         "thefuck",
+        "timeweb",
         "timr",
         "TRUECOLOR",
         "unhappychoice",
         "vicmd",
         "viins",
         "zdiff",
-        "zmodload"
+        "zmodload",
+        "конфигов"
     ]
 }

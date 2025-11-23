@@ -8,7 +8,7 @@
   time.timeZone = "Europe/Moscow";
 
   programs.bash = {
-    interactiveShellInit = builtins.readFile (self + /shell/bash/init.sh);
+    interactiveShellInit = builtins.readFile (self + /scripts/init-bash.sh);
     blesh.enable = true;
   };
   environment.pathsToLink = [ "/share/bash-completion" ];
@@ -16,7 +16,7 @@
   programs.zsh = {
     enable = true;
 
-    interactiveShellInit = builtins.readFile (self + /shell/zsh/init.zsh);
+    interactiveShellInit = builtins.readFile (self + /shell/zsh/init-zsh.zsh);
 
     enableCompletion = true;
     enableBashCompletion = true;

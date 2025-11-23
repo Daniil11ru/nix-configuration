@@ -13,13 +13,13 @@
     age.keyFile = "/home/nixos/.config/sops/age/keys.txt";
     secrets."ssh/id_ed25519_github" = {
       format = "binary";
-      sopsFile = self + "/ssh/private/id_ed25519_github.sops";
+      sopsFile = self + "/files/ssh/private/id_ed25519_github.sops.json";
       path = "${config.home.homeDirectory}/.ssh/id_ed25519_github";
       mode = "0600";
     };
     secrets."ssh/id_ed25519_gitea" = {
       format = "binary";
-      sopsFile = self + "/ssh/private/id_ed25519_gitea.sops";
+      sopsFile = self + "/files/ssh/private/id_ed25519_gitea.sops.json";
       path = "${config.home.homeDirectory}/.ssh/id_ed25519_gitea";
       mode = "0600";
     };
@@ -110,7 +110,7 @@
         navigate = true;
         catppuccin = {
           enable = true;
-          flavor = "mocha";
+          flavor = "macchiato";
         };
       };
     };
