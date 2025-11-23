@@ -3,6 +3,7 @@
   imports = [
     catppuccin.homeModules.catppuccin
     ../modules/kubernetes.nix
+    ../modules/ansible.nix
   ];
 
   my.kubernetes.enable = true;
