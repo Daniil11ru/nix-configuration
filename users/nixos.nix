@@ -1,8 +1,11 @@
-{ config, pkgs, lib, catppuccin, self, ... }:
+{ config, pkgs, pkgsUnstable, lib, catppuccin, self, ... }:
 {
   imports = [
     catppuccin.homeModules.catppuccin
+    ../modules/kubernetes.nix
   ];
+
+  my.kubernetes.enable = true;
 
   services.ssh-agent.enable = true; 
 

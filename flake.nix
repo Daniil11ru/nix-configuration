@@ -6,18 +6,31 @@
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, nixos-wsl, sops-nix, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, catppuccin, nixos-wsl, sops-nix, ... }:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
+
+    pkgs = import nixpkgs { 
+      inherit system;
+      config.allowUnfree = true;
+    };
+
+    pkgsUnstable = import nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     nixosConfigurations.wsl = lib.nixosSystem {
       system = system;
-      specialArgs = { inherit system self; };
+      specialArgs = { inherit system self pkgsUnstable; };
 
       modules = [
         nixos-wsl.nixosModules.wsl
@@ -34,9 +47,9 @@
             sops-nix.homeManagerModules.sops
           ];
 
-          home-manager.extraSpecialArgs = { inherit catppuccin self; };
+          home-manager.extraSpecialArgs = { inherit catppuccin self pkgsUnstable; };
 
-          home-manager.users.nixos = import ./home/nixos.nix;
+          home-manager.users.nixos = import ./users/nixos.nix;
         }
       ];
     };

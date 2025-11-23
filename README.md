@@ -50,4 +50,4 @@ nix flake update
 ## TODO
 
 1. Добавить tabiview;
-1. Добавить timr-tui;
+1. Добавить timr-tui.
