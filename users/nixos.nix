@@ -6,6 +6,7 @@
   ];
 
   my.kubernetes.enable = true;
+  my.ansible.enable = true;
 
   services.ssh-agent.enable = true; 
 
