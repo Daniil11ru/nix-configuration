@@ -8,10 +8,12 @@ let
 
   mergeKubeconfigScript = pkgs.writeShellScript "merge-kubernetes-configs" (
     builtins.readFile (self + "/scripts/merge-kubernetes-configs.sh")
+  );
 in {
   options.my.kubernetes.enable =
     lib.mkEnableOption "Инструменты и файлы конфигурации для Kubernetes";
 
+  config = lib.mkIf cfg.enable {
     sops.secrets."kubeconfig/timeweb" = {
       sopsFile = self + "/files/kubernetes/configs/timeweb.sops.yaml";
       path = providerKubeconfigPath;
@@ -28,7 +30,6 @@ in {
           "${pkgs.kubectl}/bin/kubectl"
       '';
 
-  config = lib.mkIf cfg.enable {
     home.packages =
       (with pkgs; [
         kubectl

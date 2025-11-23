@@ -16,7 +16,7 @@
   programs.zsh = {
     enable = true;
 
-    interactiveShellInit = builtins.readFile (self + /shell/zsh/init-zsh.zsh);
+    interactiveShellInit = builtins.readFile (self + /scripts/init-zsh.zsh);
 
     enableCompletion = true;
     enableBashCompletion = true;
