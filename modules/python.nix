@@ -11,7 +11,9 @@ in {
 
   config = {
     home.packages = [
-      (python.withPackages (ps: config.my.python.packages))
+      (python.withPackages (ps: 
+      config.my.python.packages ++ [ ps.pyyaml ]
+      ))
     ];
   };
 }
