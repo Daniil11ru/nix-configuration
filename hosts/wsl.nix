@@ -35,7 +35,10 @@
       ];
     };
   };
-  
+
+  virtualisation.docker.enable = true;
+  users.extraGroups.docker.members = [ "nixos" ];
+
   users.users.nixos.shell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
 
