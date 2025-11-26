@@ -83,6 +83,7 @@
     delta
     shfmt
     coreutils
+    undollar
   ];
 
   home.sessionVariables.MICRO_TRUECOLOR = "1";
