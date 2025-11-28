@@ -33,10 +33,15 @@ in {
           "${pkgs.kubectl}/bin/kubectl"
       '';
 
+    home.activation.fixDockerDir = lib.hm.dag.entryAfter [ "sops-nix" ] ''
+      mkdir -p "$HOME/.docker"
+      chmod 700 "$HOME/.docker"
+    '';
+
     sops.secrets."docker/config" = {
       sopsFile = self + "/files/docker/config.json";
 
-      format = "binary";
+      format = "json";
       key = "";
 
       path = "${config.home.homeDirectory}/.docker/config.json";
