@@ -33,6 +33,16 @@ in {
           "${pkgs.kubectl}/bin/kubectl"
       '';
 
+    sops.secrets."docker/config" = {
+      sopsFile = self + "/files/docker/config.json";
+
+      format = "binary";
+      key = "";
+
+      path = "${config.home.homeDirectory}/.docker/config.json";
+      mode = "0600";
+    };
+
     home.packages =
       (with pkgs; [
         kubectl
