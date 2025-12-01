@@ -37,7 +37,15 @@
   };
 
   virtualisation.docker.enable = true;
+  virtualisation.docker.extraOptions = ''
+    --insecure-registry=git.komictf.ru
+  '';
   users.extraGroups.docker.members = [ "nixos" ];
+  systemd.services.docker.environment = {
+    HTTP_PROXY  = "http://127.0.0.1:10801/";
+    HTTPS_PROXY = "http://127.0.0.1:10801/";
+    NO_PROXY    = "localhost,127.0.0.1";
+  };
 
   users.users.nixos.shell = pkgs.zsh;
   environment.shells = with pkgs; [ zsh ];
