@@ -3,12 +3,14 @@
   imports = [
     catppuccin.homeModules.catppuccin
     ../modules/kubernetes.nix
+    ../modules/go.nix
     ../modules/ansible.nix
     ../modules/frontend.nix
     ../modules/python.nix
   ];
 
   my.kubernetes.enable = true;
+  my.go.enable = true;
   my.ansible.enable = true;
   my.frontend.enable = true;
 

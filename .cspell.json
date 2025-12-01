@@ -19,6 +19,7 @@
         "fluxcd",
         "gitea",
         "gittype",
+        "gopls",
         "gping",
         "histappend",
         "kcub",
