@@ -12,6 +12,6 @@ in {
         go
         gopls
         delve
-      ])
+      ]);
   };
 }
