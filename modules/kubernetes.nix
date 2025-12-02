@@ -9,6 +9,37 @@ let
   mergeKubeconfigScript = pkgs.writeShellScript "merge-kubernetes-configs" (
     builtins.readFile (self + "/scripts/merge-kubernetes-configs.sh")
   );
+
+  kftui = pkgs.stdenvNoCC.mkDerivation rec {
+    pname = "kftui";
+    version = "0.27.2";
+
+    src =
+      let
+        tag = "v${version}";
+        system = pkgs.stdenv.hostPlatform.system;
+      in
+        if system == "x86_64-linux" then
+          pkgs.fetchurl {
+            url = "https://github.com/hcavarsan/kftray/releases/download/${tag}/kftui_linux_amd64";
+            sha256 = "sha256-FvFrDE/94qWxq7/18nVlM1vQooedKR+DhS/i+R8GZ+w=";
+          }
+        else if system == "aarch64-linux" then
+          pkgs.fetchurl {
+            url = "https://github.com/hcavarsan/kftray/releases/download/${tag}/kftui_linux_arm64";
+            sha256 = "sha256-vF/mIzrAmC83RvkM/0zyvaTvy4aBWX+/dOCAaNDvavg=";
+          }
+        else
+          throw "kftui не поддерживает ${system}";
+
+    dontUnpack = true;
+
+    installPhase = ''
+      mkdir -p "$out/bin"
+      cp "$src" "$out/bin/kftui"
+      chmod +x "$out/bin/kftui"
+    '';
+  };
 in {
   options.my.kubernetes.enable =
     lib.mkEnableOption "Инструменты и файлы конфигурации для Kubernetes";
@@ -56,6 +87,9 @@ in {
       ])
       ++ (with pkgsUnstable; [
         fluxcd
-      ]);
+      ])
+      ++ [
+        kftui
+      ];
   };
 }
