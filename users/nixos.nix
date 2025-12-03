@@ -86,6 +86,7 @@
     shfmt
     coreutils
     undollar
+    unzip
   ];
 
   home.sessionVariables.MICRO_TRUECOLOR = "1";
