@@ -84,6 +84,8 @@ in {
         kubectl
         kubernetes-helm
         terraform
+        kubetui
+        k9s
       ])
       ++ (with pkgsUnstable; [
         fluxcd
