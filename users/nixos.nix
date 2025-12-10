@@ -87,6 +87,7 @@
     coreutils
     undollar
     unzip
+    bruno-cli
   ];
 
   home.sessionVariables.MICRO_TRUECOLOR = "1";
