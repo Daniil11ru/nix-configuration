@@ -86,6 +86,8 @@ in {
         terraform
         kubetui
         k9s
+        oras
+        regctl
       ])
       ++ (with pkgsUnstable; [
         fluxcd
