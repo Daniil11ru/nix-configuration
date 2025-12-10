@@ -88,6 +88,7 @@
       coreutils
       undollar
       unzip
+      newman
     ])
     ++ (with pkgsUnstable; [
       bruno-cli
