@@ -64,31 +64,34 @@
     };
   };
 
-  home.packages = with pkgs; [
-  	wget
-    lazydocker
-    tldr
-    fd
-    gping
-    doggo
-    dust
-    duf
-    lazysql
-    lazyjournal
-    posting
-    frogmouth
-    glow
-    ripgrep
-    sops
-    age
-    docker
-    delta
-    shfmt
-    coreutils
-    undollar
-    unzip
-    bruno-cli
-  ];
+  home.packages =
+    (with pkgs; [
+      wget
+      lazydocker
+      tldr
+      fd
+      gping
+      doggo
+      dust
+      duf
+      lazysql
+      lazyjournal
+      posting
+      frogmouth
+      glow
+      ripgrep
+      sops
+      age
+      docker
+      delta
+      shfmt
+      coreutils
+      undollar
+      unzip
+    ])
+    ++ (with pkgsUnstable; [
+      bruno-cli
+    ]);
 
   home.sessionVariables.MICRO_TRUECOLOR = "1";
 
