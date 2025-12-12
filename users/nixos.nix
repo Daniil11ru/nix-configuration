@@ -87,6 +87,7 @@
     coreutils
     undollar
     unzip
+    marp-cli
   ];
 
   home.sessionVariables.MICRO_TRUECOLOR = "1";
